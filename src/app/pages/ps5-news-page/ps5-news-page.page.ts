@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PhotoService } from '../../services/photo.service';
 
 @Component({
   selector: 'app-ps5-news-page',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Ps5NewsPagePage implements OnInit {
 
-  constructor() { }
+  constructor(public photoService: PhotoService) { }
 
+  addPhotoToGallery() {
+    this.photoService.addNewToGallery();
+  }
   ngOnInit() {
   }
 
