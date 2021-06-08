@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-slides pager="true">
+    <ion-slide [routerLink]="['/covid-news-page']">
+      <img src="../../../assets/images/covid-19.jpg" alt="" />
+    </ion-slide>
+    <ion-slide [routerLink]="['/vaccin-news-page']">
+      <img src="../../../assets/images/vaccin.jpg" alt=""/>
+    </ion-slide>
+    <ion-slide [routerLink]="['/ps5-news-page']">
+      <img src="../../../assets/images/ps5.jpg" alt=""/>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-card [routerLink]="['/covid-news-page']">
+    <img src="../../../assets/images/covid-19.jpg" alt="" width="600" height="400"/>
+    <ion-card-header>
+      <ion-card-title>COVID-19</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Chiffres clés, interviews d'experts, questions-réponses, outils de prévention... tout savoir sur le coronavirus (SARS-CoV-2), COVID-19, son évolution en France et dans le Monde, et l’action de Santé publique France.
+    </ion-card-content>
+  </ion-card>
+  <ion-card [routerLink]="['/vaccin-news-page']">
+    <img src="../../../assets/images/vaccin.jpg" alt="" width="600" height="400"/>
+    <ion-card-header>
+      <ion-card-title>Vaccination pour tous (dès 18 ans)</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Les personnes de plus de 18 ans peuvent se faire vacciner sans conditions en centre de vaccination avec le vaccin Pfizer (ou Moderna uniquement pour la 2ème dose) ou en pharmacie ou chez leur médecin généraliste, dans un cabinet infirmier ou auprès d'une sage-femme avec le vaccin Moderna.    </ion-card-content>
+  </ion-card>
+  <ion-card [routerLink]="['/ps5-news-page']">
+    <img src="../../../assets/images/ps5.jpg" alt="" width="600" height="400"/>
+    <ion-card-header>
+      <ion-card-title>Jim Ryan affirme que la pénurie de PS5 sera bientôt terminée</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Fini les temps difficiles pour la PS5, la situation s’améliorera bientôt pour la dernière console de Sony, foi de Jim Ryan.
+      Bien que toujours engluée dans des problèmes de productions comme sa concurrente, la PS5 devrait être accessible plus facilement d’ici quelques semaines/mois.
+    </ion-card-content>
+  </ion-card>
+</ion-content>

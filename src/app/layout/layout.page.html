@@ -1,0 +1,22 @@
+<!--
+Ici le ion-fab (Floating Action Button)
+-->
+<div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <!--
+    Le bouton avec l'icone de menu
+    -->
+    <ion-fab-button>
+      <ion-icon name="menu-outline" size="large"></ion-icon>
+    </ion-fab-button>
+    <!--
+    Le bouton home qui s'affiche après avoir cliqué sur le bouton menu grâce à l'ion fab list
+    -->
+    <ion-fab-list side="start">
+      <ion-fab-button class="homebutton" [routerLink]="['/home']">
+        <ion-icon class="homeicon" name="home-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-router-outlet></ion-router-outlet>
+</div>
