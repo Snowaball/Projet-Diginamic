@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PhotoService } from '../../services/photo.service';
 import { ToastController } from '@ionic/angular';
-
+import { Share } from '@capacitor/share';
 @Component({
   selector: 'app-covid-news-page',
   templateUrl: './covid-news-page.page.html',
@@ -21,6 +21,15 @@ export class CovidNewsPagePage implements OnInit {
     });
     await toast.present();
   }
+  async share(){
+    await Share.share({
+      title: 'Titre',
+      text: 'Voici un article super intéréssant !',
+      url:'http://www.google.com',
+      dialogTitle: 'Share',
+    });
+  }
+
 
   ngOnInit() {
   }
