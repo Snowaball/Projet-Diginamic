@@ -2,10 +2,10 @@
  je fais comme ceci car si jamais je souhaite modifier tout le style de mon projet je n'ai qu'a changer les couleur
  de primary secondary etc et je m'évite donc beaucoup de modifications inutiles dans mon css.
  */
-.homebutton{
+.fabbutton{
   --background:var(--ion-color-primary);
 }
-.homeicon{
+.fabicon{
   color: var(--ion-color-tertiary-contrast);
 }
 img{

@@ -13,10 +13,18 @@ Ici le ion-fab (Floating Action Button)
     Le bouton home qui s'affiche après avoir cliqué sur le bouton menu grâce à l'ion fab list
     -->
     <ion-fab-list side="start">
-      <ion-fab-button class="homebutton" [routerLink]="['/home']">
-        <ion-icon class="homeicon" name="home-outline"></ion-icon>
+      <ion-fab-button class="fabbutton" [routerLink]="['/home']">
+        <ion-icon class="fabicon" name="home-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button class="fabbutton" (click)="share()">
+        <ion-icon class="fabicon" name="share-social-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button class="fabbutton" (click)="addPhotoToGallery()">
+        <ion-icon class="fabicon" name="camera"></ion-icon>
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
+  <!--Ici mon bouton qui appelle la fonction qui prends une photo-->
+
   <ion-router-outlet></ion-router-outlet>
 </div>
