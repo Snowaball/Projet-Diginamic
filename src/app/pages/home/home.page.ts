@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {PhotoService} from '../../services/photo.service';
+import {VibrationService} from '../../services/vibration.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
-
+  constructor(public photoService: PhotoService,public vibrationService: VibrationService) {}
+  vibration(){
+    this.vibrationService.vibrate();
+  }
 }

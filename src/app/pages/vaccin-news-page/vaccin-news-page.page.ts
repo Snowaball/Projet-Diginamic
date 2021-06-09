@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PhotoService } from '../../services/photo.service';
 @Component({
   selector: 'app-vaccin-news-page',
   templateUrl: './vaccin-news-page.page.html',
@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VaccinNewsPagePage implements OnInit {
 
-  constructor() { }
+  constructor(public photoService: PhotoService) { }
 
+  addPhotoToGallery() {
+    this.photoService.addNewToGallery();
+  }
   ngOnInit() {
   }
 
