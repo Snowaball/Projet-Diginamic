@@ -25,7 +25,7 @@ export class CovidNewsPagePage implements OnInit {
     await Share.share({
       title: 'Titre',
       text: 'Voici un article super intéréssant !',
-      url:'http://www.google.com',
+      url:'https://www.lemonde.fr/idees/article/2021/06/08/l-antarctique-le-symbole-de-notre-engagement-commun-dans-la-lutte-contre-la-crise-environnementale_6083342_3232.html',
       dialogTitle: 'Share',
     });
   }
