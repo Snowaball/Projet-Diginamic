@@ -12,7 +12,7 @@ export class LayoutPage implements OnInit {
 
   constructor(public photoService: PhotoService, public toastController: ToastController) {
   }
-
+  // Appel du service qui ouvre la caméra + ajout du toast lors de l'ajout de l'image
   async addPhotoToGallery() {
     await this.photoService.addNewToGallery();
     const toast = await this.toastController.create({
@@ -23,6 +23,7 @@ export class LayoutPage implements OnInit {
     await toast.present();
   }
 
+  //fonction qui permet le partage d'un article
   async share() {
     await Share.share({
       title: 'Titre',

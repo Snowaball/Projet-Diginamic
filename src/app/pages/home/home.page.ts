@@ -14,9 +14,11 @@ export class HomePage implements OnInit, AfterViewInit{
   news: News[];
   public toggle= true;
   constructor(public photoService: PhotoService,public vibrationService: VibrationService, public newsService: NewsService) {}
+  /* La fonction qui appelle le service qui fait vibrer l'appareil*/
   vibration(){
     this.vibrationService.vibrate();
   }
+  /* La fonction qui active ou désactive la fonctionnalité de reorganiser les articles*/
   toggleReorder(){
     if(this.toggle){
       this.toggle=false;
@@ -25,13 +27,17 @@ export class HomePage implements OnInit, AfterViewInit{
     }
   }
 
+  /* Je récupère mes info de news service*/
   ngOnInit() {
     this.news = this.newsService.getAll();
   }
 
+  /* Je désactive de base la réorganisation des articles */
   ngAfterViewInit(): void {
     this.reorderGroup.disabled = true;
   }
+
+  /* Je termine l'action glisser déposer lors de la reorganisation d'un article */
   doReorder(evt){
     evt.detail.complete(true);
   }

@@ -9,19 +9,18 @@ export class PhotoService {
   public photos: Photos[] = [];
   constructor() { }
   public async addNewToGallery() {
-    // Take a photo
+    // prendre une photo
     const capturedPhoto = await Camera.getPhoto({
       resultType: CameraResultType.Uri,
       source: CameraSource.Camera,
       quality: 100
     });
     this.photos.unshift({
-      filepath: 'soon...',
       webviewPath: capturedPhoto.webPath
     });
   }
 }
+//Déclaration du contenu de photos
 export interface Photos {
-  filepath: string;
   webviewPath: string;
 }

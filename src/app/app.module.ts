@@ -11,6 +11,7 @@ import {Vibration} from '@ionic-native/vibration/ngx';
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  //Ajout de Vibration dans les providers
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },Vibration
   ],

@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
+<!-- Ici le slider qui montre l'image de chaque article -->
   <ion-slides pager="true">
     <ion-slide [routerLink]="['/covid-news-page']" (click)="vibration()">
       <img src="../../../assets/images/covid-19.jpg" alt=""/>
@@ -20,8 +20,9 @@
     </ion-slide>
   </ion-slides>
 
-
+  <!-- Ici mon reorder group qui permet de reorganiser les articles sur la page principale -->
   <ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="{{toggle}}">
+    <!-- Tout le contenu des card est fourni par le service news.service -->
       <ion-item *ngFor="let new of news">
         <ion-card  [routerLink]="new.url" (click)="vibration()">
           <img src="{{new.image}}" alt="" width="600" height="400"/>
@@ -36,6 +37,7 @@
       </ion-item>
   </ion-reorder-group>
 
+  <!-- Ici l'ion fab qui permet d'activer ou non la réorganisation des articles -->
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="toggleReorder()">
       <ion-icon name="settings-outline"></ion-icon>

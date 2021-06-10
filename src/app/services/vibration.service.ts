@@ -7,6 +7,7 @@ import { Vibration } from '@ionic-native/vibration/ngx';
 export class VibrationService {
 
   constructor(private vibration: Vibration) { }
+  //Déclenchement de la vibration
   public vibrate(){
     this.vibration.vibrate(200);
   }
