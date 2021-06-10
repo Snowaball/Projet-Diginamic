@@ -1,0 +1,10 @@
+Mon projet est un site de news.
+Les fonctionnalités natives utilisées sont :
+La camera, disponible dans chaque article pour ajouter une photo à l'article.
+La vibration, a chaque clic sur un article une petite vibration se déclenche.
+
+J'ai ajouté les components :
+Slides pour avoir plusieurs article cliquables dans une slide en début de page.
+Card pour la mise en page de chaque article sur la page d'accueil.
+FAB (Floating Action Button) dans chaque article pour accèder aux différentes fonctionnalitées.
+Toast qui confirme l'ajout d'une image sur un article

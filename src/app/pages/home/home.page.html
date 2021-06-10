@@ -21,57 +21,24 @@
   </ion-slides>
 
 
-  <ion-reorder-group disabled="{{toggle}}">
-    <!-- Default reorder icon, end aligned items -->
-    <ion-item>
-      <ion-card [routerLink]="['/covid-news-page']" (click)="vibration()">
-        <img src="../../../assets/images/covid-19.jpg" alt="" width="600" height="400"/>
+  <ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="{{toggle}}">
+      <ion-item *ngFor="let new of news">
+        <ion-card  [routerLink]="new.url" (click)="vibration()">
+          <img src="{{new.image}}" alt="" width="600" height="400"/>
         <ion-card-header>
-          <ion-card-title>COVID-19</ion-card-title>
+          <ion-card-title>{{new.title}}</ion-card-title>
         </ion-card-header>
-
         <ion-card-content>
-          Chiffres clés, interviews d'experts, questions-réponses, outils de prévention... tout savoir sur le
-          coronavirus (SARS-CoV-2), COVID-19, son évolution en France et dans le Monde, et l’action de Santé publique
-          France.
+          {{new.description}}
         </ion-card-content>
-      </ion-card>
-      <ion-reorder slot="end"></ion-reorder>
-    </ion-item>
-
-    <ion-item>
-      <ion-card [routerLink]="['/vaccin-news-page']" (click)="vibration()">
-        <img src="../../../assets/images/vaccin.jpg" alt="" width="600" height="400"/>
-        <ion-card-header>
-          <ion-card-title>Vaccination pour tous (dès 18 ans)</ion-card-title>
-        </ion-card-header>
-
-        <ion-card-content>
-          Les personnes de plus de 18 ans peuvent se faire vacciner sans conditions en centre de vaccination avec le
-          vaccin Pfizer (ou Moderna uniquement pour la 2ème dose) ou en pharmacie ou chez leur médecin généraliste, dans
-          un cabinet infirmier ou auprès d'une sage-femme avec le vaccin Moderna.
-        </ion-card-content>
-      </ion-card>
-      <ion-reorder slot="end"></ion-reorder>
-    </ion-item>
-
-    <!-- Default reorder icon, start aligned items -->
-    <ion-item>
-      <ion-card [routerLink]="['/ps5-news-page']" (click)="vibration()">
-        <img src="../../../assets/images/ps5.jpg" alt="" width="600" height="400"/>
-        <ion-card-header>
-          <ion-card-title>Jim Ryan affirme que la pénurie de PS5 sera bientôt terminée</ion-card-title>
-        </ion-card-header>
-
-        <ion-card-content>
-          Fini les temps difficiles pour la PS5, la situation s’améliorera bientôt pour la dernière console de Sony, foi
-          de Jim Ryan.
-          Bien que toujours engluée dans des problèmes de productions comme sa concurrente, la PS5 devrait être
-          accessible plus facilement d’ici quelques semaines/mois.
-        </ion-card-content>
-      </ion-card>
-      <ion-reorder slot="end"></ion-reorder>
-    </ion-item>
+        </ion-card>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
   </ion-reorder-group>
-  <ion-button (click)="toggleReorder()">Reorder</ion-button>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="toggleReorder()">
+      <ion-icon name="settings-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
