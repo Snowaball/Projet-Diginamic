@@ -1,7 +1,18 @@
-Je voulais faire une application de news, ce qui m'a donné cette idée c'est les ion card car cela m'a fait penser aux
-actu google. Je voulais avoir une disposition en ion card du coup et aussi avoir un slide, ce que j'ai fait.
+News
 
+Mon application donne les actualités du monde.
 
+Fonctionnalitées :
+(avant de coder) Je veux pouvoir ajouter des photos  dans mes articles et avoir la possibilité de partager les articles,
+je veux aussi que l'application soit ergonomique.
+
+Pour aller plus loin :
 Ce que j'ajouterais en plus ce serait le fait de récupèrer des flux RSS pour avoir de vraies actualités mais il me
-faudrait plus de temps.
+faudrait plus de temps. Et donc cela inclus le ion refresh que je rajouterais après le flux rss car de nouveaux articles
+pourraient apparaitre.
+
+Problèmes rencontrés:
+Problèmes d'installation réglés en désinstallant/ réinstallant, problème avec l'ion reorder réglé grâce à vous (merci :D)
+a part ça pas de problèmes.
+
 
