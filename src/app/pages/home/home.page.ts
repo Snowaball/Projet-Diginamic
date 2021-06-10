@@ -8,9 +8,17 @@ import {VibrationService} from '../../services/vibration.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  public toggle= true;
   constructor(public photoService: PhotoService,public vibrationService: VibrationService) {}
   vibration(){
     this.vibrationService.vibrate();
   }
+  toggleReorder(){
+    if(this.toggle){
+      this.toggle=false;
+    }else{
+      this.toggle =true;
+    }
+  }
+
 }

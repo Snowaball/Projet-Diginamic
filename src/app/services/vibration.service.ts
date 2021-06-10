@@ -8,6 +8,6 @@ export class VibrationService {
 
   constructor(private vibration: Vibration) { }
   public vibrate(){
-    this.vibration.vibrate([1000,500,500]);
+    this.vibration.vibrate(200);
   }
 }
